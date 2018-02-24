@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		758E733E2041553F0058FE26 /* showPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758E733D2041553F0058FE26 /* showPhotoViewController.m */; };
 		92AE1C5620413C3C00FB2FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AE1C5520413C3C00FB2FAB /* AppDelegate.m */; };
 		92AE1C5920413C3C00FB2FAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AE1C5820413C3C00FB2FAB /* ViewController.m */; };
 		92AE1C5C20413C3C00FB2FAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AE1C5A20413C3C00FB2FAB /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		758E733D2041553F0058FE26 /* showPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = showPhotoViewController.m; sourceTree = "<group>"; };
+		758E733F204155620058FE26 /* showPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = showPhotoViewController.h; sourceTree = "<group>"; };
 		92AE1C5120413C3C00FB2FAB /* git_test02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = git_test02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AE1C5420413C3C00FB2FAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92AE1C5520413C3C00FB2FAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				92AE1C5520413C3C00FB2FAB /* AppDelegate.m */,
 				92AE1C5720413C3C00FB2FAB /* ViewController.h */,
 				92AE1C5820413C3C00FB2FAB /* ViewController.m */,
+				758E733D2041553F0058FE26 /* showPhotoViewController.m */,
+				758E733F204155620058FE26 /* showPhotoViewController.h */,
 				92AE1C5A20413C3C00FB2FAB /* Main.storyboard */,
 				92AE1C5D20413C3C00FB2FAB /* Assets.xcassets */,
 				92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */,
@@ -143,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92AE1C5920413C3C00FB2FAB /* ViewController.m in Sources */,
+				758E733E2041553F0058FE26 /* showPhotoViewController.m in Sources */,
 				92AE1C6420413C3C00FB2FAB /* main.m in Sources */,
 				92AE1C5620413C3C00FB2FAB /* AppDelegate.m in Sources */,
 			);
