@@ -24,6 +24,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+//
+//-（void）setup{
+//    UIButton *btn1;
+//}
 
 @end
