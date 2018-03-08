@@ -7,28 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		758E733E2041553F0058FE26 /* showPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758E733D2041553F0058FE26 /* showPhotoViewController.m */; };
+		10C400567A2289AD4CD409D1 /* libPods-git_test02.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E275D22A11E684DE604B6FD /* libPods-git_test02.a */; };
 		92AE1C5620413C3C00FB2FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AE1C5520413C3C00FB2FAB /* AppDelegate.m */; };
 		92AE1C5920413C3C00FB2FAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AE1C5820413C3C00FB2FAB /* ViewController.m */; };
-		92AE1C5C20413C3C00FB2FAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AE1C5A20413C3C00FB2FAB /* Main.storyboard */; };
-		92AE1C5E20413C3C00FB2FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92AE1C5D20413C3C00FB2FAB /* Assets.xcassets */; };
 		92AE1C6120413C3C00FB2FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */; };
 		92AE1C6420413C3C00FB2FAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AE1C6320413C3C00FB2FAB /* main.m */; };
+		92F2A2EA204FB7E7007512E9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F2A2E9204FB7E7007512E9 /* LoginViewController.m */; };
+		92F2A2ED20510F61007512E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92F2A2EC20510F61007512E9 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		758E733D2041553F0058FE26 /* showPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = showPhotoViewController.m; sourceTree = "<group>"; };
-		758E733F204155620058FE26 /* showPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = showPhotoViewController.h; sourceTree = "<group>"; };
+		4E275D22A11E684DE604B6FD /* libPods-git_test02.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-git_test02.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		750A28ACD8D4500756575085 /* Pods-git_test02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-git_test02.release.xcconfig"; path = "Pods/Target Support Files/Pods-git_test02/Pods-git_test02.release.xcconfig"; sourceTree = "<group>"; };
+		8E3CAAC9598E6A499CC64DF3 /* Pods-git_test02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-git_test02.debug.xcconfig"; path = "Pods/Target Support Files/Pods-git_test02/Pods-git_test02.debug.xcconfig"; sourceTree = "<group>"; };
 		92AE1C5120413C3C00FB2FAB /* git_test02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = git_test02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AE1C5420413C3C00FB2FAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92AE1C5520413C3C00FB2FAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		92AE1C5720413C3C00FB2FAB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		92AE1C5820413C3C00FB2FAB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		92AE1C5B20413C3C00FB2FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		92AE1C5D20413C3C00FB2FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92AE1C6020413C3C00FB2FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92AE1C6220413C3C00FB2FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92AE1C6320413C3C00FB2FAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92F2A2E9204FB7E7007512E9 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		92F2A2EB204FBA33007512E9 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		92F2A2EC20510F61007512E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +38,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C400567A2289AD4CD409D1 /* libPods-git_test02.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2587506D86D657CA68FA369D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E275D22A11E684DE604B6FD /* libPods-git_test02.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		92AE1C4820413C3B00FB2FAB = {
 			isa = PBXGroup;
 			children = (
 				92AE1C5320413C3C00FB2FAB /* git_test02 */,
 				92AE1C5220413C3C00FB2FAB /* Products */,
+				99233FA761FEAFA0A7A3D814 /* Pods */,
+				2587506D86D657CA68FA369D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,15 +78,23 @@
 				92AE1C5520413C3C00FB2FAB /* AppDelegate.m */,
 				92AE1C5720413C3C00FB2FAB /* ViewController.h */,
 				92AE1C5820413C3C00FB2FAB /* ViewController.m */,
-				758E733D2041553F0058FE26 /* showPhotoViewController.m */,
-				758E733F204155620058FE26 /* showPhotoViewController.h */,
-				92AE1C5A20413C3C00FB2FAB /* Main.storyboard */,
-				92AE1C5D20413C3C00FB2FAB /* Assets.xcassets */,
+				92F2A2EB204FBA33007512E9 /* LoginViewController.h */,
+				92F2A2E9204FB7E7007512E9 /* LoginViewController.m */,
+				92F2A2EC20510F61007512E9 /* Assets.xcassets */,
 				92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */,
 				92AE1C6220413C3C00FB2FAB /* Info.plist */,
 				92AE1C6320413C3C00FB2FAB /* main.m */,
 			);
 			path = git_test02;
+			sourceTree = "<group>";
+		};
+		99233FA761FEAFA0A7A3D814 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E3CAAC9598E6A499CC64DF3 /* Pods-git_test02.debug.xcconfig */,
+				750A28ACD8D4500756575085 /* Pods-git_test02.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92AE1C6720413C3C00FB2FAB /* Build configuration list for PBXNativeTarget "git_test02" */;
 			buildPhases = (
+				FB34D5C72FB21BCDE790D8F0 /* [CP] Check Pods Manifest.lock */,
 				92AE1C4D20413C3C00FB2FAB /* Sources */,
 				92AE1C4E20413C3C00FB2FAB /* Frameworks */,
 				92AE1C4F20413C3C00FB2FAB /* Resources */,
+				DBCD8FD9A113FCBBF77DDBFF /* [CP] Embed Pods Frameworks */,
+				AA7012A9FC5659773731FF90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,21 +158,71 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F2A2ED20510F61007512E9 /* Assets.xcassets in Resources */,
 				92AE1C6120413C3C00FB2FAB /* LaunchScreen.storyboard in Resources */,
-				92AE1C5E20413C3C00FB2FAB /* Assets.xcassets in Resources */,
-				92AE1C5C20413C3C00FB2FAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AA7012A9FC5659773731FF90 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-git_test02/Pods-git_test02-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBCD8FD9A113FCBBF77DDBFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-git_test02/Pods-git_test02-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB34D5C72FB21BCDE790D8F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-git_test02-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		92AE1C4D20413C3C00FB2FAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F2A2EA204FB7E7007512E9 /* LoginViewController.m in Sources */,
 				92AE1C5920413C3C00FB2FAB /* ViewController.m in Sources */,
-				758E733E2041553F0058FE26 /* showPhotoViewController.m in Sources */,
 				92AE1C6420413C3C00FB2FAB /* main.m in Sources */,
 				92AE1C5620413C3C00FB2FAB /* AppDelegate.m in Sources */,
 			);
@@ -157,14 +231,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		92AE1C5A20413C3C00FB2FAB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92AE1C5B20413C3C00FB2FAB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,29 +348,33 @@
 		};
 		92AE1C6820413C3C00FB2FAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E3CAAC9598E6A499CC64DF3 /* Pods-git_test02.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M7MSD7MMC;
 				INFOPLIST_FILE = git_test02/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mrwang90hou-163.com.git-test02";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		92AE1C6920413C3C00FB2FAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 750A28ACD8D4500756575085 /* Pods-git_test02.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M7MSD7MMC;
 				INFOPLIST_FILE = git_test02/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mrwang90hou-163.com.git-test02";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
