@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		10C400567A2289AD4CD409D1 /* libPods-git_test02.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E275D22A11E684DE604B6FD /* libPods-git_test02.a */; };
+		924C1241205234E000EBFCBE /* GFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C123F205234DF00EBFCBE /* GFButton.m */; };
+		924C124320523C4500EBFCBE /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924C124220523C4500EBFCBE /* LoginViewController.storyboard */; };
+		924C124720525EA500EBFCBE /* CYXThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C124420525EA400EBFCBE /* CYXThreeViewController.m */; };
+		924C124820525EA500EBFCBE /* CYXThreeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924C124520525EA400EBFCBE /* CYXThreeViewController.storyboard */; };
+		924C124D20525FA700EBFCBE /* CYXTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C124920525FA500EBFCBE /* CYXTableViewController.m */; };
+		924C124E20525FA700EBFCBE /* CYXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C124A20525FA600EBFCBE /* CYXDetailViewController.m */; };
+		924C1276205271B500EBFCBE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C1274205271B400EBFCBE /* SecondViewController.m */; };
+		927D7EA7205280C000889D3A /* ConfirmLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D7EA6205280C000889D3A /* ConfirmLoginViewController.m */; };
+		927D7EA92052818F00889D3A /* ConfirmLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927D7EA82052818F00889D3A /* ConfirmLoginViewController.storyboard */; };
 		92AE1C5620413C3C00FB2FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AE1C5520413C3C00FB2FAB /* AppDelegate.m */; };
 		92AE1C5920413C3C00FB2FAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AE1C5820413C3C00FB2FAB /* ViewController.m */; };
 		92AE1C6120413C3C00FB2FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */; };
@@ -20,6 +29,21 @@
 		4E275D22A11E684DE604B6FD /* libPods-git_test02.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-git_test02.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		750A28ACD8D4500756575085 /* Pods-git_test02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-git_test02.release.xcconfig"; path = "Pods/Target Support Files/Pods-git_test02/Pods-git_test02.release.xcconfig"; sourceTree = "<group>"; };
 		8E3CAAC9598E6A499CC64DF3 /* Pods-git_test02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-git_test02.debug.xcconfig"; path = "Pods/Target Support Files/Pods-git_test02/Pods-git_test02.debug.xcconfig"; sourceTree = "<group>"; };
+		924C123F205234DF00EBFCBE /* GFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFButton.m; sourceTree = "<group>"; };
+		924C1240205234DF00EBFCBE /* GFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFButton.h; sourceTree = "<group>"; };
+		924C124220523C4500EBFCBE /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		924C124420525EA400EBFCBE /* CYXThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYXThreeViewController.m; sourceTree = "<group>"; };
+		924C124520525EA400EBFCBE /* CYXThreeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CYXThreeViewController.storyboard; sourceTree = "<group>"; };
+		924C124620525EA500EBFCBE /* CYXThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYXThreeViewController.h; sourceTree = "<group>"; };
+		924C124920525FA500EBFCBE /* CYXTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYXTableViewController.m; sourceTree = "<group>"; };
+		924C124A20525FA600EBFCBE /* CYXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYXDetailViewController.m; sourceTree = "<group>"; };
+		924C124B20525FA600EBFCBE /* CYXTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYXTableViewController.h; sourceTree = "<group>"; };
+		924C124C20525FA600EBFCBE /* CYXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYXDetailViewController.h; sourceTree = "<group>"; };
+		924C1274205271B400EBFCBE /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		924C1275205271B500EBFCBE /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		927D7EA12052802700889D3A /* ConfirmLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmLoginViewController.h; sourceTree = "<group>"; };
+		927D7EA6205280C000889D3A /* ConfirmLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmLoginViewController.m; sourceTree = "<group>"; };
+		927D7EA82052818F00889D3A /* ConfirmLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfirmLoginViewController.storyboard; sourceTree = "<group>"; };
 		92AE1C5120413C3C00FB2FAB /* git_test02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = git_test02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AE1C5420413C3C00FB2FAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92AE1C5520413C3C00FB2FAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +77,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		924C12772052763800EBFCBE /* ThreeView */ = {
+			isa = PBXGroup;
+			children = (
+				924C124620525EA500EBFCBE /* CYXThreeViewController.h */,
+				924C124420525EA400EBFCBE /* CYXThreeViewController.m */,
+				924C124B20525FA600EBFCBE /* CYXTableViewController.h */,
+				924C124920525FA500EBFCBE /* CYXTableViewController.m */,
+				924C124C20525FA600EBFCBE /* CYXDetailViewController.h */,
+				924C124A20525FA600EBFCBE /* CYXDetailViewController.m */,
+				924C124520525EA400EBFCBE /* CYXThreeViewController.storyboard */,
+			);
+			path = ThreeView;
+			sourceTree = "<group>";
+		};
+		927D7EA020527FE900889D3A /* ConfirmLogin */ = {
+			isa = PBXGroup;
+			children = (
+				927D7EA12052802700889D3A /* ConfirmLoginViewController.h */,
+				927D7EA6205280C000889D3A /* ConfirmLoginViewController.m */,
+				927D7EA82052818F00889D3A /* ConfirmLoginViewController.storyboard */,
+			);
+			path = ConfirmLogin;
+			sourceTree = "<group>";
+		};
 		92AE1C4820413C3B00FB2FAB = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +128,13 @@
 				92AE1C5820413C3C00FB2FAB /* ViewController.m */,
 				92F2A2EB204FBA33007512E9 /* LoginViewController.h */,
 				92F2A2E9204FB7E7007512E9 /* LoginViewController.m */,
+				924C124220523C4500EBFCBE /* LoginViewController.storyboard */,
+				924C1240205234DF00EBFCBE /* GFButton.h */,
+				924C123F205234DF00EBFCBE /* GFButton.m */,
+				924C12772052763800EBFCBE /* ThreeView */,
+				927D7EA020527FE900889D3A /* ConfirmLogin */,
+				924C1275205271B500EBFCBE /* SecondViewController.h */,
+				924C1274205271B400EBFCBE /* SecondViewController.m */,
 				92F2A2EC20510F61007512E9 /* Assets.xcassets */,
 				92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */,
 				92AE1C6220413C3C00FB2FAB /* Info.plist */,
@@ -158,8 +213,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927D7EA92052818F00889D3A /* ConfirmLoginViewController.storyboard in Resources */,
 				92F2A2ED20510F61007512E9 /* Assets.xcassets in Resources */,
+				924C124820525EA500EBFCBE /* CYXThreeViewController.storyboard in Resources */,
 				92AE1C6120413C3C00FB2FAB /* LaunchScreen.storyboard in Resources */,
+				924C124320523C4500EBFCBE /* LoginViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,9 +230,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-git_test02/Pods-git_test02-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -221,10 +282,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924C1276205271B500EBFCBE /* SecondViewController.m in Sources */,
 				92F2A2EA204FB7E7007512E9 /* LoginViewController.m in Sources */,
+				924C1241205234E000EBFCBE /* GFButton.m in Sources */,
+				924C124E20525FA700EBFCBE /* CYXDetailViewController.m in Sources */,
+				924C124720525EA500EBFCBE /* CYXThreeViewController.m in Sources */,
 				92AE1C5920413C3C00FB2FAB /* ViewController.m in Sources */,
 				92AE1C6420413C3C00FB2FAB /* main.m in Sources */,
+				927D7EA7205280C000889D3A /* ConfirmLoginViewController.m in Sources */,
 				92AE1C5620413C3C00FB2FAB /* AppDelegate.m in Sources */,
+				924C124D20525FA700EBFCBE /* CYXTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UISegmentedControl *btn_select;
+@property (strong, nonatomic) IBOutlet UITextField *text;
+@property (strong, nonatomic) IBOutlet UIButton *btn;
 
 @end
+

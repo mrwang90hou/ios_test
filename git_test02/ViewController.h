@@ -11,13 +11,16 @@
 
 @interface ViewController : UIViewController
 //
-@property (strong, nonatomic) IBOutlet UILabel *userOutPut;
-@property (strong, nonatomic) IBOutlet UITextField *userInPut;
-- (IBAction)setOutPut:(id)sender;
 //-(void)print;
 
 //- (void)resizedImageWithOrdinaryName:(NSString *)Ordinaryname HighlightName:(NSString *)HighlightName;
 @property (nonatomic, strong) UICollectionView *collectionView;
+
+
+
+
+@property(nonatomic ,strong)UIButton *btn;
+
 
 @end
 

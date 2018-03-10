@@ -17,25 +17,30 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    // 1.创建窗口
-//    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-//    // 2.设置窗口的根控制器
-//    ViewController *ViewControler = [[ViewController alloc]init];
-//    self.window.rootViewController = ViewControler;
-//    // 3.显示窗口
-//    [self.window makeKeyAndVisible];
-  
-#pragma mark - 第二次加载方式
-    //1、创建窗口
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    //2、设置窗口的根控制器
-    UINavigationController *navC = [[UINavigationController alloc]initWithRootViewController:[[ViewController alloc]init]];
-    self.window.rootViewController = navC;
-    //3、显示窗口
-    self.window.backgroundColor = [UIColor yellowColor];
-    [self.window makeKeyAndVisible];
+    // 1.创建UIWindow对象窗口，并将UIWindows初始化为与屏幕相同大小
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    // 2.设置窗口的根控制器
     
+    ViewController *ViewControler = [[ViewController alloc]init];
+
+//    UIViewController *ViewControler = [[UIViewController alloc]init];
+    self.window.rootViewController = ViewControler;
+    // 3.显示窗口
+    [self.window makeKeyAndVisible];
+    //4.设置UIWindows背景色
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+//#pragma mark - 第二次加载方式
+//    //1、创建窗口
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    // Override point for customization after application launch.
+//    //2、设置窗口的根控制器
+//    UINavigationController *navC = [[UINavigationController alloc]initWithRootViewController:[[ViewController alloc]init]];
+//    self.window.rootViewController = navC;
+//    //3、显示窗口
+//    self.window.backgroundColor = [UIColor yellowColor];
+//    [self.window makeKeyAndVisible];
+//
     // Override point for customization after application launch.
     return YES;
 }

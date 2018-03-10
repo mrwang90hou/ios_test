@@ -8,9 +8,13 @@
 
 #import "ViewController.h"
 #import "LoginViewController.h"
-
-#define fDeviceWidth ([UIScreen mainScreen].bounds.size.width)
-#define fDeviceHeight ([UIScreen mainScreen].bounds.size.height)
+#import "GFButton.h"
+#import "Masonry.h"
+#import "CYXThreeViewController.h"
+#import "SecondViewController.h"
+//屏幕尺寸
+#define kMainScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kMainScreenHeight [UIScreen mainScreen].bounds.size.height
 static float AD_height = 150;//广告栏高度
 
 @interface ViewController ()
@@ -23,9 +27,9 @@ static float AD_height = 150;//广告栏高度
     [super viewDidLoad];
 //
     //导航栏背景颜色
-    [self.navigationController.navigationBar setBarTintColor:[UIColor orangeColor]];
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:20.0f],NSFontAttributeName, nil]];
-    self.navigationItem.title = @"My Home";
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor orangeColor]];
+//    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:20.0f],NSFontAttributeName, nil]];
+//    self.navigationItem.title = @"My Home";
     
     /**
      *  创建collectionView self自动调用setter getter方法
@@ -49,16 +53,11 @@ static float AD_height = 150;//广告栏高度
     
     */
     
-    
-    
-    
-    
-    
 //
 //    UIButton *timeFormButton = [UIButton new];
 //    timeFormButton.backgroundColor = [UIColor greenColor];
     //[self view addSubview:timeFormButton];
-    [self print];
+    //[self print];
     [self setupView];
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -87,90 +86,52 @@ static float AD_height = 150;//广告栏高度
     
     //self.title = @"wangning";
     //LoginViewController *oneView = [[LoginViewController alloc]init];
-    UIView* view2 = [UIView new];
-    [self.view addSubview:view2];
-    [view2 setBackgroundColor:[UIColor yellowColor]];
-    UIButton *btn = [[UIButton alloc] init];
-    [self.view  addSubview:btn];
-    [btn setTag:1000];//设置标签🏷
-    [btn setTitle:@"button" forState:UIControlStateNormal];
-    //[btn setTitle:@"login", forState:UIControlStateNormal];
-    //[btn resizedImageWithOrdinaryName:@"wn" HighlightName:@""];
-    [btn addTarget:self action:@selector(popViewAction:) forControlEvents:UIControlEventTouchUpInside];
-    btn.layer.borderColor = [UIColor grayColor].CGColor;
-    btn.layer.borderWidth = 0.5;
-//    [timeFormButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//
-//        make.top.mas_equalTo(nameLabel.mas_bottom).with.offset(5);
-//        make.left.mas_equalTo(_timeFormLabel.mas_right).with.offset(0);
-//        make.width.mas_equalTo(widthButton);
-//        make.height.mas_equalTo(30);
-//    }];
-    //self.view = @[view];
-    //view.title = @"UIView";
-    //self.oneView.backgroundColor = [UIColor whiteColor];
+//    UIView* view2 = [UIView new];
+//    [self.view addSubview:view2];
+//    [view2 setBackgroundColor:[UIColor yellowColor]];
+    //UIButton *btn = [[UIButton alloc] init];
     
-//    [self.view setBackgroundColor:[UIColor whiteColor]];
-//    UIView* view = [UIView new];
-//    [self.view addSubview:view];
-/*
-    UIButton *timeFormButton = [UIButton new];
-    timeFormButton.backgroundColor = [UIColor greenColor];
-    [view addSubview:timeFormButton];
-    [timeFormButton setTag:1000];
-    [timeFormButton resizedImageWithOrdinaryName:@"ic_uppressed" HighlightName:@""];
-    [timeFormButton addTarget:self action:@selector(popViewAction:) forControlEvents:UIControlEventTouchUpInside];
-    timeFormButton.layer.borderColor = [UIColor grayColor].CGColor;
-    timeFormButton.layer.borderWidth = 0.5;
-    [timeFormButton mas_makeConstraints:^(MASConstraintMaker *make) {
-
-        make.top.mas_equalTo(nameLabel.mas_bottom).with.offset(5);
-        make.left.mas_equalTo(_timeFormLabel.mas_right).with.offset(0);
-        make.width.mas_equalTo(widthButton);
-        make.height.mas_equalTo(30);
+    UIView *view1 = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    view1.backgroundColor = [UIColor yellowColor];
+    view1.layer.cornerRadius = 5;
+    [self.view addSubview:view1];
+    
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    button.backgroundColor = [UIColor greenColor];
+//    button.frame = CGRectMake(view1.frame.origin.x, view1.frame.origin.y, view1.frame.size.width/2, view1.frame.size.height/2);
+//
+//    [button addTarget:self action:@selector(initAlertView:) forControlEvents:UIControlEventTouchUpInside];
+//    [view1 addSubview:button];
+//
+//    long visitorCount = 100;
+//    [button setTitle:[NSString stringWithFormat:@"%ld人",(unsigned long)visitorCount] forState:UIControlStateNormal];
+    //[button.hidden = true];
+    
+    
+    
+    // 登录按钮
+    GFButton *loginButton = [[GFButton alloc] init];
+    [loginButton setTitle:@"跳转☞" forState:UIControlStateNormal];
+    [loginButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [loginButton setBackgroundImage:[UIImage imageNamed:@"bg_btn_login_normal"] forState:UIControlStateNormal];
+    [loginButton setBackgroundImage:[UIImage imageNamed:@"bg_btn_login_pressed"] forState:UIControlStateHighlighted];
+    [loginButton addTarget:self action:@selector(initAlertView:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:loginButton];
+    [loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(50);
+        make.left.equalTo(self.view).with.offset(35);
+        make.right.equalTo(self.view).with.offset(-35);
+        make.top.equalTo(self.view).with.offset(200);
     }];
-//
-    
-    
-    UILabel* nameLabel = [UILabel new];
-    nameLabel.backgroundColor = [UIColor blackColor];
-    [view addSubview:nameLabel];
-    [nameLabel setText:@"This is a programe!"];
- 
- */
- 
-//  [nameLabel sizeWithfont:14.5 color:[UIColor blackColor] TextAlignment:NSTextAlignmentLeft text:NSNewLocalizedString(@"my_log_message", nil) mark:1];
-//    [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//
-//        make.top.mas_equalTo(view.mas_top).with.offset(5);
-//        make.left.mas_equalTo(view.mas_left).with.offset(10);
-//        make.right.mas_equalTo(view.mas_right).with.offset(-10);
-//        make.height.mas_equalTo(30);
-//    }];
-//
-//
-    
-    
-    // 初始化列表
-   // UITableView* _mTableView = [[UITableView alloc] init];
-//    [self.view addSubview:_mTableView];
-//    //    [_mTableView setDelegate:self];
-//    //    [_mTableView setDataSource:self];
-//    [_mTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    //    [_mTableView setMj_footer:[MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(messageListFooterRefresh)]];
-    //[_mTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ProcessCell"];
-    
     
 }
 //this is wangning !
-- (IBAction)setOutPut:(id)sender {
-    
-    self.userOutPut.text = self.userInPut.text;
-}
+
 - (void)popViewAction:(UIButton *)button {
     //[nameLa]
     //[self.nameLabel setText:@"This is a wangning!"];
     NSLog(@"wm");
+    printf("This is a progream!!!\n");
     //[self.navigationController popViewControllerAnimated:YES];       //返回弹出式控制器（mrwang90hou-2017.11.16  pm）
 }
 
@@ -182,12 +143,12 @@ static float AD_height = 150;//广告栏高度
         
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         
-        flowLayout.headerReferenceSize = CGSizeMake(fDeviceWidth, AD_height+10);//头部大小
+        flowLayout.headerReferenceSize = CGSizeMake(kMainScreenWidth, AD_height+10);//头部大小
         
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, fDeviceWidth, fDeviceHeight) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight) collectionViewLayout:flowLayout];
         
         //定义每个UICollectionView 的大小
-        flowLayout.itemSize = CGSizeMake((fDeviceWidth-20)/2, (fDeviceWidth-20)/2+50);
+        flowLayout.itemSize = CGSizeMake((kMainScreenWidth-20)/2, (kMainScreenWidth-20)/2+50);
         //定义每个UICollectionView 横向的间距
         flowLayout.minimumLineSpacing = 5;
         //定义每个UICollectionView 纵向的间距
@@ -212,5 +173,118 @@ static float AD_height = 150;//广告栏高度
     return _collectionView;
 }
 
+#pragma mark - 弹出框
+- (void)initAlertView:(UIButton *)button {
+//    UINavigationController *nav = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+//
+//    CYXThreeViewController *sec = [[CYXThreeViewController alloc]init];
+//
+//
+//    [nav pushViewController:sec animated:YES];
+//
+//
 
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+    {
+        UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"警告⚠️\n即将进行页面跳转操作!" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        //添加Button
+        [alertController addAction: [UIAlertAction actionWithTitle: @"NO" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            //取消
+
+            return ;
+
+        }]];
+        [alertController addAction: [UIAlertAction actionWithTitle: @"YES" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            //跳转到确认登录页面
+            //[self confirmLogin];
+            [self btnClick];
+            return ;
+
+        }]];
+        [self presentViewController: alertController animated: YES completion: nil];
+
+    }
+    else
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"my_logout_warning" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES",nil];
+        [alertView show];
+    }
+    
+}
+-(void)confirmLogin{
+    // 跳转回登录界面
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LigonViewController" bundle:nil];
+    
+    CYXThreeViewController *mLoginVC = [storyBoard instantiateInitialViewController];
+    
+    //mLoginVC.delegate = self;
+
+    UINavigationController * nVC = [[UINavigationController alloc]initWithRootViewController:mLoginVC];
+    
+    
+    [nVC pushViewController:mLoginVC animated:YES];
+//    [mLoginVC release];
+//    [window addSubView:nVC.view];
+//    [nVC release];
+    
+    
+    //[self presentViewController:nVC animated:YES completion:^{
+    //}];
+    
+    
+    //    CYXFourViewController *fourVC = [[CYXFourViewController alloc]init];
+    
+    //[self setUpOneChildViewController:fourVC image:[UIImage imageNamed:@"user"] title:@"设置"];
+    
+    
+    //LoginViewController *mLoginVC = [[LoginViewController alloc]init];
+    
+    //UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:[[LoginViewController alloc]init]];
+    //[mLoginVC showNoticeHudWithTitle:@"my_logout_success" subtitle:@"my_logout_success" onView:navigationController.view inDuration:2];
+    //[UIApplication sharedApplication].keyWindow.rootViewController = mLoginVC;
+   //[self.window setRootViewController:mLoginVC];
+    //[self  LoginViewController:mLoginVC  animated:YES completion:nil];//从当前界面到nextVC
+    //[self dismissViewControllerAnimated:YES completion:nil];//从nextVC界面回去
+    //PickImageViewController *ickImageViewController = [[PickImageViewController alloc] init];
+    //[self presentModalViewController:mLoginVC animated:YES];
+    //返回
+    //[self dismissModalViewControllerAnimated:YES];
+}
+-(void)btnClick
+{
+    /*
+    //设置要进入的页面
+    SecondViewController *secondVC = [[SecondViewController alloc]init];
+    //设置转变模式，为反转分格
+    secondVC.modalTransitionStyle =   UIModalTransitionStyleFlipHorizontal;
+    //现在开启动画
+    [self presentViewController:secondVC animated:YES completion:nil];
+    
+ */
+    ///////2////////
+    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"CYXThreeViewController" bundle:nil];
+    //设置要进入的页面
+    CYXThreeViewController *mLoginVC = [storyBoard instantiateInitialViewController];
+
+    
+    
+    
+    
+    /////////3//////////
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoginViewController" bundle:nil];
+//    //设置要进入的页面
+//    LoginViewController *mLoginVC = [storyBoard instantiateInitialViewController];
+    
+    
+    
+//    //设置转变模式，为反转分格
+    mLoginVC.modalTransitionStyle =   UIModalTransitionStyleFlipHorizontal;
+    //现在开启动画
+    [self presentViewController:mLoginVC animated:YES completion:nil];
+    
+    
+    
+    
+}
 @end
