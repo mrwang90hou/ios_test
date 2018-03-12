@@ -21,14 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zJ6-CW-L2P">
-                                <rect key="frame" x="127" y="28" width="121" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUd-Fa-hpg">
                                 <rect key="frame" x="38" y="190" width="299" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -78,6 +70,15 @@
                                     <action selector="back_action:" destination="b0B-AK-1YT" eventType="touchUpInside" id="ERY-3O-otd"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zJ6-CW-L2P">
+                                <rect key="frame" x="95" y="28" width="185" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="one"/>
+                                    <segment title="two"/>
+                                    <segment title="three"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="0.745343435" blue="0.80052530020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -89,12 +90,14 @@
                         <outlet property="back_btn" destination="HRH-5J-A1c" id="wT7-Fv-EcT"/>
                         <outlet property="okLab" destination="gbm-5w-B11" id="naE-yu-8W1"/>
                         <outlet property="password" destination="Op0-86-Px9" id="aPI-vO-ChQ"/>
+                        <outlet property="seg_conntrol" destination="zJ6-CW-L2P" id="H6x-gk-3CI"/>
+                        <outlet property="switch_btn" destination="ASS-0C-yKa" id="lr0-h0-TF7"/>
                         <outlet property="useName" destination="d95-nw-sr9" id="HEF-Ho-Uga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AHo-o5-hag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8.8000000000000007" y="-230.73463268365819"/>
+            <point key="canvasLocation" x="240.80000000000001" y="-157.87106446776613"/>
         </scene>
     </scenes>
 </document>

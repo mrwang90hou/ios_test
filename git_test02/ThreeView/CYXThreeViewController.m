@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UILabel *okLab;
 @property (strong, nonatomic) IBOutlet UIButton *back_btn;
+@property (strong, nonatomic) IBOutlet UISwitch *switch_btn;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *seg_conntrol;
 
 @end
 
@@ -58,12 +60,26 @@
 - (IBAction)loginBtnClick:(UIButton *)sender {
     if ([self.useName.text isEqualToString:@"1"] && [self.password.text isEqualToString:@"1"]) {
         //        [sender setTitle:@"登录成功.." forState:UIControlStateNormal];
+        if ([self check_agree] == false) {//检查是否同意协议
+            return;
+        }
         [SVProgressHUD showSuccessWithStatus:@"登录成功"];
         //self.tableView = [CYXTableViewController new];
         //[self.navigationController pushViewController:self.tableView animated:YES];
-        //页面跳转
-        [self pageJump];
-        
+        switch (_seg_conntrol.selectedSegmentIndex) {
+            case 0:
+                [self pageJump1];
+                break;
+            case 1:
+                [self pageJump2];
+                break;
+            case 2:
+                [self pageJump3];
+                break;
+            default:
+                [SVProgressHUD showErrorWithStatus:@"选择跳转的页面方式错误❌！"];
+                break;
+        }
     } else {
         [SVProgressHUD showErrorWithStatus:@"用户名或密码错误！"];
     }
@@ -73,9 +89,21 @@
     
     if (sender.isOn) {
         self.okLab.text = @"同意协议";
+    }else
+    {
+        self.okLab.text = @"不同意协议";
     }
 }
-
+-(bool)check_agree{
+    if (_switch_btn.isOn == false) {
+        [SVProgressHUD showErrorWithStatus:@"请先同意协议！"];
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
 /*
 #pragma mark - Navigation
 
@@ -108,8 +136,8 @@
     [_useName endEditing:YES];
     [_password endEditing:YES];
 }
-
--(void)pageJump{
+#pragma mark 方式一：storyboard跳转方式
+-(void)pageJump1{
 
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"ConfirmLoginViewController" bundle:nil];
     //设置即将要跳转的页面
@@ -117,8 +145,40 @@
     //设置转变模式，为反转分格
     comfirmLogin.modalTransitionStyle =  UIModalTransitionStyleFlipHorizontal;
     //现在开启动画
+    //[self dismissViewControllerAnimated:YES completion:nil];
+
     [self presentViewController:comfirmLogin animated:YES completion:nil];
     
-    [SVProgressHUD showSuccessWithStatus:@"页面跳转成功！"];
+    [SVProgressHUD showSuccessWithStatus:@"页面方式一跳转成功！"];
+}
+#pragma mark 方式二：纯代码跳转方式
+-(void)pageJump2{
+    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"ConfirmLoginViewController" bundle:nil];
+    //设置即将要跳转的页面
+    ConfirmLoginViewController *comfirmLogin = [storyBoard instantiateInitialViewController];
+    //设置转变模式，为反转分格
+    comfirmLogin.modalTransitionStyle =  UIModalTransitionStyleFlipHorizontal;
+    //现在开启动画
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self presentViewController:comfirmLogin animated:YES completion:nil];
+    
+    [SVProgressHUD showSuccessWithStatus:@"页面方式二跳转成功！"];
+}
+#pragma mark 方式三：xib布局----跳转方式
+-(void)pageJump3{
+    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"ConfirmLoginViewController" bundle:nil];
+    //设置即将要跳转的页面
+    ConfirmLoginViewController *comfirmLogin = [storyBoard instantiateInitialViewController];
+    //设置转变模式，为反转分格
+    comfirmLogin.modalTransitionStyle =  UIModalTransitionStyleFlipHorizontal;
+    //现在开启动画
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self presentViewController:comfirmLogin animated:YES completion:nil];
+    
+    [SVProgressHUD showSuccessWithStatus:@"页面方式三跳转成功！"];
 }
 @end

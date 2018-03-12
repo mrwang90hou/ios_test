@@ -267,10 +267,6 @@ static float AD_height = 150;//广告栏高度
     //设置要进入的页面
     CYXThreeViewController *mLoginVC = [storyBoard instantiateInitialViewController];
 
-    
-    
-    
-    
     /////////3//////////
 //    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoginViewController" bundle:nil];
 //    //设置要进入的页面
