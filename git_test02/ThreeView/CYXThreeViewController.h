@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CYXThreeViewController : UIViewController
+@interface CYXThreeViewController : UIViewController<UITextFieldDelegate>
 
 @end

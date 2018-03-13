@@ -48,7 +48,7 @@
     // 释放资源
     free(ivarList);
      */
-    
+    //[self textFieldShouldReturn:_useName];
      
 }
 
@@ -123,19 +123,25 @@
 }
 - (IBAction)touchView:(id)sender {
     [self.view endEditing:YES];
-
+    //获取文本框对象后,退出第一响应者
+    //[self.textField resignFirstResponder];
 }
 
-// 输入的回车键键
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self hideInput];
-    return YES;
+
+- (IBAction)user_action:(id)sender {
+    //[self hideInput];
+    //[self.didTextfield resignFirstResponder];
 }
-// 隐藏键盘
-- (void)hideInput {
-    [_useName endEditing:YES];
-    [_password endEditing:YES];
+- (IBAction)password_action:(id)sender {
+    //[self.didTextfield resignFirstResponder];
 }
+
+
+
+
+
+
+
 #pragma mark 方式一：storyboard跳转方式
 -(void)pageJump1{
 
@@ -185,4 +191,23 @@
     self.password.text = @"wangning";
     [self.switch_btn setOn:true];
 }
+
+#pragma --mark textFieldDelegate
+//调用delete方法,<UITextFieldDelegate>
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];//释放第一响应者
+    return YES;
+}
+//// 输入的回车键键
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+//    [self hideInput];
+//    return YES;
+//}
+// 隐藏键盘
+- (void)hideInput {
+    [_useName endEditing:YES];
+    [_password endEditing:YES];
+}
+
 @end

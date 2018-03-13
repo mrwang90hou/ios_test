@@ -38,6 +38,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <action selector="password_action:" destination="b0B-AK-1YT" eventType="editingDidEnd" id="N3h-fn-Wtl"/>
+                                    <outlet property="delegate" destination="b0B-AK-1YT" id="pMX-AL-ktg"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="d95-nw-sr9">
                                 <rect key="frame" x="38" y="79" width="299" height="30"/>
@@ -46,6 +50,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                <connections>
+                                    <action selector="user_action:" destination="b0B-AK-1YT" eventType="editingDidEnd" id="ZBf-Va-aGj"/>
+                                    <outlet property="delegate" destination="b0B-AK-1YT" id="rVY-OM-Jge"/>
+                                </connections>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ASS-0C-yKa">
                                 <rect key="frame" x="288" y="248" width="51" height="31"/>

@@ -27,14 +27,22 @@
     [self.navigationItem setLeftBarButtonItem:back_btn];
     
     
-    //重新发送
-    UIButton  *return_btn = [UIButton buttonWithType:UIButtonTypeSystem];
-    [return_btn setTitle:@"重新发送" forState:UIControlStateNormal];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:return_btn];
-    [return_btn addTarget:self action:@selector(returnSend) forControlEvents:UIControlEventTouchUpInside];
     
+    //导航栏样式button
+    //返回按钮
+    UIBarButtonItem *return_btn = [[UIBarButtonItem alloc]initWithTitle:@"重新发送" style:UIBarButtonItemStylePlain target:self action:@selector(returnSend)];
+    [self.navigationItem setRightBarButtonItem:return_btn];
     
-    
+//
+//
+//    //重新发送
+//    UIButton  *return_btn = [UIButton buttonWithType:UIButtonTypeSystem];
+//    [return_btn setTitle:@"重新发送" forState:UIControlStateNormal];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:return_btn];
+//    [return_btn addTarget:self action:@selector(returnSend) forControlEvents:UIControlEventTouchUpInside];
+//
+//
+//
     
     //重新发送
     UIButton  *return_btn2 = [UIButton buttonWithType:UIButtonTypeSystem];
