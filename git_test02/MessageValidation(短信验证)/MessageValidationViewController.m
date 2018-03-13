@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MessageValidationViewController.h"
 #import "SVProgressHUD.h"
+#import "Masonry.h"
 @interface MessageValidationViewController()
 
 @end
@@ -35,7 +36,20 @@
     
     
     
+    //重新发送
+    UIButton  *return_btn2 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [return_btn2 setTitle:@"重新发送" forState:UIControlStateNormal];
     
+    [self.view addSubview:return_btn2];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:return_btn];
+    [return_btn2 addTarget:self action:@selector(returnSend) forControlEvents:UIControlEventTouchUpInside];
+    
+    [return_btn2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(50);
+        make.left.equalTo(self.view).with.offset(35);
+        make.right.equalTo(self.view).with.offset(-35);
+        make.top.equalTo(self.view).with.offset(200);
+    }];
     
     
 }

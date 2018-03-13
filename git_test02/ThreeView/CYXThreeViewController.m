@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self setData];//自动填写数据
 //    self.view.backgroundColor = [UIColor yellowColor];
     
     /*
@@ -58,7 +58,7 @@
 }
 
 - (IBAction)loginBtnClick:(UIButton *)sender {
-    if ([self.useName.text isEqualToString:@"1"] && [self.password.text isEqualToString:@"1"]) {
+    if ([self.useName.text isEqualToString:@"wangning"] && [self.password.text isEqualToString:@"wangning"]) {
         //        [sender setTitle:@"登录成功.." forState:UIControlStateNormal];
         if ([self check_agree] == false) {//检查是否同意协议
             return;
@@ -179,5 +179,10 @@
     [self presentViewController:comfirmLogin animated:YES completion:nil];
     
     [SVProgressHUD showSuccessWithStatus:@"页面方式三跳转成功！"];
+}
+-(void)setData{
+    self.useName.text = @"wangning";
+    self.password.text = @"wangning";
+    [self.switch_btn setOn:true];
 }
 @end

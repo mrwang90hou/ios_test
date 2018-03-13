@@ -20,11 +20,12 @@
 		924C124820525EA500EBFCBE /* CYXThreeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924C124520525EA400EBFCBE /* CYXThreeViewController.storyboard */; };
 		924C124D20525FA700EBFCBE /* CYXTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C124920525FA500EBFCBE /* CYXTableViewController.m */; };
 		924C124E20525FA700EBFCBE /* CYXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C124A20525FA600EBFCBE /* CYXDetailViewController.m */; };
-		924C1276205271B500EBFCBE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C1274205271B400EBFCBE /* SecondViewController.m */; };
 		92AE1C5620413C3C00FB2FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AE1C5520413C3C00FB2FAB /* AppDelegate.m */; };
 		92AE1C5920413C3C00FB2FAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AE1C5820413C3C00FB2FAB /* ViewController.m */; };
 		92AE1C6120413C3C00FB2FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */; };
 		92AE1C6420413C3C00FB2FAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AE1C6320413C3C00FB2FAB /* main.m */; };
+		92C391DD205810F500717859 /* BYTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C391DA205810F500717859 /* BYTimer.m */; };
+		92C391DE205810F500717859 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 92C391DB205810F500717859 /* README.md */; };
 		92F2A2EA204FB7E7007512E9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F2A2E9204FB7E7007512E9 /* LoginViewController.m */; };
 		92F2A2ED20510F61007512E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92F2A2EC20510F61007512E9 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -53,8 +54,6 @@
 		924C124A20525FA600EBFCBE /* CYXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYXDetailViewController.m; sourceTree = "<group>"; };
 		924C124B20525FA600EBFCBE /* CYXTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYXTableViewController.h; sourceTree = "<group>"; };
 		924C124C20525FA600EBFCBE /* CYXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYXDetailViewController.h; sourceTree = "<group>"; };
-		924C1274205271B400EBFCBE /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		924C1275205271B500EBFCBE /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		92AE1C5120413C3C00FB2FAB /* git_test02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = git_test02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AE1C5420413C3C00FB2FAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92AE1C5520413C3C00FB2FAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +62,10 @@
 		92AE1C6020413C3C00FB2FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92AE1C6220413C3C00FB2FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92AE1C6320413C3C00FB2FAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92C391D9205810F500717859 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		92C391DA205810F500717859 /* BYTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTimer.m; sourceTree = "<group>"; };
+		92C391DB205810F500717859 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		92C391DC205810F500717859 /* BYTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTimer.h; sourceTree = "<group>"; };
 		92F2A2E9204FB7E7007512E9 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		92F2A2EB204FBA33007512E9 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		92F2A2EC20510F61007512E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,17 +175,27 @@
 				924C123F205234DF00EBFCBE /* GFButton.m */,
 				924C12772052763800EBFCBE /* ThreeView */,
 				923C034220560BA2006D4A46 /* ConfirmLogin */,
-				924C1275205271B500EBFCBE /* SecondViewController.h */,
-				924C1274205271B400EBFCBE /* SecondViewController.m */,
 				7589E0E5205780C300DBDFCA /* ConfirmLoginSecond */,
 				7589E0E920579EA200DBDFCA /* ConfirmLoginThird */,
 				7589E0F02057C24200DBDFCA /* MessageValidation(短信验证) */,
 				92F2A2EC20510F61007512E9 /* Assets.xcassets */,
+				92C391D8205810F500717859 /* BYTimer-master */,
 				92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */,
 				92AE1C6220413C3C00FB2FAB /* Info.plist */,
 				92AE1C6320413C3C00FB2FAB /* main.m */,
 			);
 			path = git_test02;
+			sourceTree = "<group>";
+		};
+		92C391D8205810F500717859 /* BYTimer-master */ = {
+			isa = PBXGroup;
+			children = (
+				92C391D9205810F500717859 /* Singleton.h */,
+				92C391DC205810F500717859 /* BYTimer.h */,
+				92C391DA205810F500717859 /* BYTimer.m */,
+				92C391DB205810F500717859 /* README.md */,
+			);
+			path = "BYTimer-master";
 			sourceTree = "<group>";
 		};
 		99233FA761FEAFA0A7A3D814 /* Pods */ = {
@@ -258,6 +271,7 @@
 				92F2A2ED20510F61007512E9 /* Assets.xcassets in Resources */,
 				7589E0EF20579F1E00DBDFCA /* ConfirmLoginThirdViewController.xib in Resources */,
 				923C034620560BA3006D4A46 /* ConfirmLoginViewController.storyboard in Resources */,
+				92C391DE205810F500717859 /* README.md in Resources */,
 				924C124820525EA500EBFCBE /* CYXThreeViewController.storyboard in Resources */,
 				92AE1C6120413C3C00FB2FAB /* LaunchScreen.storyboard in Resources */,
 				924C124320523C4500EBFCBE /* LoginViewController.storyboard in Resources */,
@@ -325,7 +339,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				924C1276205271B500EBFCBE /* SecondViewController.m in Sources */,
 				92F2A2EA204FB7E7007512E9 /* LoginViewController.m in Sources */,
 				923C034720560BA3006D4A46 /* ConfirmLoginViewController.m in Sources */,
 				924C1241205234E000EBFCBE /* GFButton.m in Sources */,
@@ -337,6 +350,7 @@
 				92AE1C5920413C3C00FB2FAB /* ViewController.m in Sources */,
 				92AE1C6420413C3C00FB2FAB /* main.m in Sources */,
 				92AE1C5620413C3C00FB2FAB /* AppDelegate.m in Sources */,
+				92C391DD205810F500717859 /* BYTimer.m in Sources */,
 				924C124D20525FA700EBFCBE /* CYXTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,7 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3M7MSD7MMC;
+				DEVELOPMENT_TEAM = KEVDZPHMGU;
 				INFOPLIST_FILE = git_test02/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -481,7 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3M7MSD7MMC;
+				DEVELOPMENT_TEAM = KEVDZPHMGU;
 				INFOPLIST_FILE = git_test02/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

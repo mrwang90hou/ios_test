@@ -11,7 +11,6 @@
 #import "GFButton.h"
 #import "Masonry.h"
 #import "CYXThreeViewController.h"
-#import "SecondViewController.h"
 //屏幕尺寸
 #define kMainScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kMainScreenHeight [UIScreen mainScreen].bounds.size.height
