@@ -11,7 +11,7 @@
 #import <SVProgressHUD.h>
 #import "CYXTableViewController.h"
 #import "ConfirmLoginViewController.h"
-
+#import "ConfirmLoginSecondViewController.h"
 @interface CYXThreeViewController ()<UINavigationControllerDelegate>
 
 @property (nonatomic, strong) CYXTableViewController *tableView;
@@ -154,15 +154,14 @@
 #pragma mark 方式二：纯代码跳转方式
 -(void)pageJump2{
     
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"ConfirmLoginViewController" bundle:nil];
-    //设置即将要跳转的页面
-    ConfirmLoginViewController *comfirmLogin = [storyBoard instantiateInitialViewController];
-    //设置转变模式，为反转分格
-    comfirmLogin.modalTransitionStyle =  UIModalTransitionStyleFlipHorizontal;
-    //现在开启动画
-    //[self dismissViewControllerAnimated:YES completion:nil];
+    //设置要进入的页面
+    ComfirmLoginSceondViewController *secondVC = [[ComfirmLoginSceondViewController alloc]init];
+    UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:secondVC];
+    //设置跳转动画：从下至上
+    secondVC.modalTransitionStyle = UIModalPresentationFullScreen;
     
-    [self presentViewController:comfirmLogin animated:YES completion:nil];
+    //现在开启动画
+    [self presentViewController:nVC animated:YES completion:nil];
     
     [SVProgressHUD showSuccessWithStatus:@"页面方式二跳转成功！"];
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		10C400567A2289AD4CD409D1 /* libPods-git_test02.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E275D22A11E684DE604B6FD /* libPods-git_test02.a */; };
+		7589E0E82057822600DBDFCA /* ConfirmLoginSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7589E0E72057822600DBDFCA /* ConfirmLoginSecondViewController.m */; };
+		7589E0ED20579F0600DBDFCA /* ConfirmLoginThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7589E0EC20579F0600DBDFCA /* ConfirmLoginThirdViewController.m */; };
+		7589E0EF20579F1E00DBDFCA /* ConfirmLoginThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7589E0EE20579F1E00DBDFCA /* ConfirmLoginThirdViewController.xib */; };
+		7589E0F32057C2B800DBDFCA /* MessageValidationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7589E0F22057C2B800DBDFCA /* MessageValidationViewController.m */; };
 		923C034620560BA3006D4A46 /* ConfirmLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923C034320560BA2006D4A46 /* ConfirmLoginViewController.storyboard */; };
 		923C034720560BA3006D4A46 /* ConfirmLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923C034420560BA2006D4A46 /* ConfirmLoginViewController.m */; };
 		924C1241205234E000EBFCBE /* GFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C123F205234DF00EBFCBE /* GFButton.m */; };
@@ -28,6 +32,13 @@
 /* Begin PBXFileReference section */
 		4E275D22A11E684DE604B6FD /* libPods-git_test02.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-git_test02.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		750A28ACD8D4500756575085 /* Pods-git_test02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-git_test02.release.xcconfig"; path = "Pods/Target Support Files/Pods-git_test02/Pods-git_test02.release.xcconfig"; sourceTree = "<group>"; };
+		7589E0E6205780F900DBDFCA /* ConfirmLoginSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmLoginSecondViewController.h; sourceTree = "<group>"; };
+		7589E0E72057822600DBDFCA /* ConfirmLoginSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmLoginSecondViewController.m; sourceTree = "<group>"; };
+		7589E0EA20579EDF00DBDFCA /* ConfirmLoginThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmLoginThirdViewController.h; sourceTree = "<group>"; };
+		7589E0EC20579F0600DBDFCA /* ConfirmLoginThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmLoginThirdViewController.m; sourceTree = "<group>"; };
+		7589E0EE20579F1E00DBDFCA /* ConfirmLoginThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmLoginThirdViewController.xib; sourceTree = "<group>"; };
+		7589E0F12057C2A800DBDFCA /* MessageValidationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageValidationViewController.h; sourceTree = "<group>"; };
+		7589E0F22057C2B800DBDFCA /* MessageValidationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageValidationViewController.m; sourceTree = "<group>"; };
 		8E3CAAC9598E6A499CC64DF3 /* Pods-git_test02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-git_test02.debug.xcconfig"; path = "Pods/Target Support Files/Pods-git_test02/Pods-git_test02.debug.xcconfig"; sourceTree = "<group>"; };
 		923C034320560BA2006D4A46 /* ConfirmLoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConfirmLoginViewController.storyboard; sourceTree = "<group>"; };
 		923C034420560BA2006D4A46 /* ConfirmLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmLoginViewController.m; sourceTree = "<group>"; };
@@ -77,12 +88,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7589E0E5205780C300DBDFCA /* ConfirmLoginSecond */ = {
+			isa = PBXGroup;
+			children = (
+				7589E0E6205780F900DBDFCA /* ConfirmLoginSecondViewController.h */,
+				7589E0E72057822600DBDFCA /* ConfirmLoginSecondViewController.m */,
+			);
+			path = ConfirmLoginSecond;
+			sourceTree = "<group>";
+		};
+		7589E0E920579EA200DBDFCA /* ConfirmLoginThird */ = {
+			isa = PBXGroup;
+			children = (
+				7589E0EA20579EDF00DBDFCA /* ConfirmLoginThirdViewController.h */,
+				7589E0EC20579F0600DBDFCA /* ConfirmLoginThirdViewController.m */,
+				7589E0EE20579F1E00DBDFCA /* ConfirmLoginThirdViewController.xib */,
+			);
+			path = ConfirmLoginThird;
+			sourceTree = "<group>";
+		};
+		7589E0F02057C24200DBDFCA /* MessageValidation(短信验证) */ = {
+			isa = PBXGroup;
+			children = (
+				7589E0F12057C2A800DBDFCA /* MessageValidationViewController.h */,
+				7589E0F22057C2B800DBDFCA /* MessageValidationViewController.m */,
+			);
+			path = "MessageValidation(短信验证)";
+			sourceTree = "<group>";
+		};
 		923C034220560BA2006D4A46 /* ConfirmLogin */ = {
 			isa = PBXGroup;
 			children = (
 				923C034320560BA2006D4A46 /* ConfirmLoginViewController.storyboard */,
-				923C034420560BA2006D4A46 /* ConfirmLoginViewController.m */,
 				923C034520560BA2006D4A46 /* ConfirmLoginViewController.h */,
+				923C034420560BA2006D4A46 /* ConfirmLoginViewController.m */,
 			);
 			path = ConfirmLogin;
 			sourceTree = "<group>";
@@ -135,6 +174,9 @@
 				923C034220560BA2006D4A46 /* ConfirmLogin */,
 				924C1275205271B500EBFCBE /* SecondViewController.h */,
 				924C1274205271B400EBFCBE /* SecondViewController.m */,
+				7589E0E5205780C300DBDFCA /* ConfirmLoginSecond */,
+				7589E0E920579EA200DBDFCA /* ConfirmLoginThird */,
+				7589E0F02057C24200DBDFCA /* MessageValidation(短信验证) */,
 				92F2A2EC20510F61007512E9 /* Assets.xcassets */,
 				92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */,
 				92AE1C6220413C3C00FB2FAB /* Info.plist */,
@@ -214,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F2A2ED20510F61007512E9 /* Assets.xcassets in Resources */,
+				7589E0EF20579F1E00DBDFCA /* ConfirmLoginThirdViewController.xib in Resources */,
 				923C034620560BA3006D4A46 /* ConfirmLoginViewController.storyboard in Resources */,
 				924C124820525EA500EBFCBE /* CYXThreeViewController.storyboard in Resources */,
 				92AE1C6120413C3C00FB2FAB /* LaunchScreen.storyboard in Resources */,
@@ -287,7 +330,10 @@
 				923C034720560BA3006D4A46 /* ConfirmLoginViewController.m in Sources */,
 				924C1241205234E000EBFCBE /* GFButton.m in Sources */,
 				924C124E20525FA700EBFCBE /* CYXDetailViewController.m in Sources */,
+				7589E0F32057C2B800DBDFCA /* MessageValidationViewController.m in Sources */,
+				7589E0E82057822600DBDFCA /* ConfirmLoginSecondViewController.m in Sources */,
 				924C124720525EA500EBFCBE /* CYXThreeViewController.m in Sources */,
+				7589E0ED20579F0600DBDFCA /* ConfirmLoginThirdViewController.m in Sources */,
 				92AE1C5920413C3C00FB2FAB /* ViewController.m in Sources */,
 				92AE1C6420413C3C00FB2FAB /* main.m in Sources */,
 				92AE1C5620413C3C00FB2FAB /* AppDelegate.m in Sources */,
