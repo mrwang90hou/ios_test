@@ -40,10 +40,9 @@
     [self.navigationItem setLeftBarButtonItem:back_btn];
     
     
-    
     //导航栏样式button
     //返回按钮
-    UIBarButtonItem *return_btn = [[UIBarButtonItem alloc]initWithTitle:@"重新发送" style:UIBarButtonItemStylePlain target:self action:@selector(returnSend)];
+    UIBarButtonItem *return_btn = [[UIBarButtonItem alloc]initWithTitle:@"跳转" style:UIBarButtonItemStylePlain target:self action:@selector(returnSend)];
     [self.navigationItem setRightBarButtonItem:return_btn];
     
 //
@@ -174,7 +173,7 @@
     UIButton *login_btn_root = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:login_btn_root];
     [login_btn_root mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(self.view).with.offset(10);//左侧
+        //make.leading.equalTo(self.view).with.offset(10);//左侧
         make.trailing.equalTo(self.view).with.offset(-10);//右侧
         make.top.equalTo(_albumButton.mas_bottom).with.offset(32);
         make.height.equalTo(@40);
@@ -201,7 +200,7 @@
 //    pressedBackground = [pressedBackground resizableImageWithCapInsets:UIEdgeInsetsMake(12, 12, 12, 12) resizingMode:UIImageResizingModeStretch];
     
     //[albumButton setImage:[UIImage imageNamed:@"ic_photo_normal"] forState:UIControlStateNormal];
-    [_albumButton setTitle:@"登录验证" forState:UIControlStateNormal];
+    [_albumButton setTitle:@"发送验证码🐎" forState:UIControlStateNormal];
     //[albumButton setTitle:@"recognition_get_trademark_album"];
     [_albumButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     //[albumButton setBackgroundImage:normalBackground forState:UIControlStateNormal];
@@ -217,7 +216,7 @@
     _albumButton.layer.borderColor = [UIColor colorWithRed:178.0/255 green:228.0/255 blue:253.0/255 alpha:1].CGColor;
     
     //[cameraButton setImage:[UIImage imageNamed:@"ic_photograph_normal"] forState:UIControlStateNormal];
-    [login_btn_root setTitle:@"发送成功【60s】" forState:UIControlStateNormal];
+    [login_btn_root setTitle:@"验证登录🏮" forState:UIControlStateNormal];
     [login_btn_root setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     //[cameraButton setBackgroundImage:normalBackground forState:UIControlStateNormal];
     //[cameraButton setBackgroundImage:pressedBackground forState:UIControlStateHighlighted];
@@ -235,12 +234,10 @@
     
     
 }
-
 -(void)backClick
 {
     //返回到之前的视图控制器
     [self dismissViewControllerAnimated:YES completion:nil];
-    
 }
 -(void)returnSend{
     [SVProgressHUD showSuccessWithStatus:@"重新发送短信验证码！"];

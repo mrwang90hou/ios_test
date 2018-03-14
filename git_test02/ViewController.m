@@ -94,35 +94,43 @@ static float AD_height = 150;//广告栏高度
     view1.backgroundColor = [UIColor yellowColor];
     view1.layer.cornerRadius = 5;
     [self.view addSubview:view1];
-    
 //    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
 //    button.backgroundColor = [UIColor greenColor];
 //    button.frame = CGRectMake(view1.frame.origin.x, view1.frame.origin.y, view1.frame.size.width/2, view1.frame.size.height/2);
-//
 //    [button addTarget:self action:@selector(initAlertView:) forControlEvents:UIControlEventTouchUpInside];
 //    [view1 addSubview:button];
-//
 //    long visitorCount = 100;
 //    [button setTitle:[NSString stringWithFormat:@"%ld人",(unsigned long)visitorCount] forState:UIControlStateNormal];
     //[button.hidden = true];
-    
-    
-    
     // 登录按钮
     GFButton *loginButton = [[GFButton alloc] init];
-    [loginButton setTitle:@"跳转☞" forState:UIControlStateNormal];
+    [loginButton setTitle:@"跳转至扫码登录☞" forState:UIControlStateNormal];
     [loginButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [loginButton setBackgroundImage:[UIImage imageNamed:@"bg_btn_login_normal"] forState:UIControlStateNormal];
     [loginButton setBackgroundImage:[UIImage imageNamed:@"bg_btn_login_pressed"] forState:UIControlStateHighlighted];
     [loginButton addTarget:self action:@selector(initAlertView:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
     [loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(50);//设置控件高度
+        make.left.equalTo(self.view).with.offset(35);//距离左侧宽度
+        make.right.equalTo(self.view).with.offset(-35);//距离右侧宽度
+        make.top.equalTo(self.view).with.offset(200);//距离顶部200
+    }];
+    
+    //UITableViewCell_btn
+    GFButton *table_vc_btn = [[GFButton alloc] init];
+    [table_vc_btn setTitle:@"跳转至☞UITableViewCell" forState:UIControlStateNormal];
+    [table_vc_btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [table_vc_btn setBackgroundImage:[UIImage imageNamed:@"bg_btn_login_normal"] forState:UIControlStateNormal];
+    [table_vc_btn setBackgroundImage:[UIImage imageNamed:@"bg_btn_login_pressed"] forState:UIControlStateHighlighted];//长按效果
+    [table_vc_btn addTarget:self action:@selector(turn_to_UITableView:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:table_vc_btn];
+    [table_vc_btn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(50);
         make.left.equalTo(self.view).with.offset(35);
         make.right.equalTo(self.view).with.offset(-35);
-        make.top.equalTo(self.view).with.offset(200);
+        make.top.equalTo(loginButton.mas_bottom).with.offset(20);
     }];
-    
 }
 //this is wangning !
 
@@ -270,16 +278,48 @@ static float AD_height = 150;//广告栏高度
 //    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoginViewController" bundle:nil];
 //    //设置要进入的页面
 //    LoginViewController *mLoginVC = [storyBoard instantiateInitialViewController];
-    
-    
-    
 //    //设置转变模式，为反转分格
     mLoginVC.modalTransitionStyle =   UIModalTransitionStyleFlipHorizontal;
     //现在开启动画
     [self presentViewController:mLoginVC animated:YES completion:nil];
+ 
+}
+//跳转至turn_to_UITableView
+-(void)turn_to_UITableView{
     
-    
-    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+    {
+        UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"警告⚠️\n即将进行页面跳转操作!" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        //添加Button
+        [alertController addAction: [UIAlertAction actionWithTitle: @"跳转方式一" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            //取消
+            [self btnClick];
+            return ;
+            
+        }]];
+        [alertController addAction: [UIAlertAction actionWithTitle: @"跳转方式二" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            //跳转到确认登录页面
+            //[self confirmLogin];
+            [self btnClick];
+            return ;
+            
+        }]];
+//        [alertController addAction: [UIAlertAction actionWithTitle: @"取消" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//            //跳转到确认登录页面
+//            //[self confirmLogin];
+//            [self btnClick];
+//            return ;
+//        }]];
+        [self presentViewController: alertController animated: YES completion: nil];
+    }
+    else
+    {
+        [self print];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"my_logout_warning" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES",nil];
+        [alertView show];
+    }
     
 }
+
+
 @end

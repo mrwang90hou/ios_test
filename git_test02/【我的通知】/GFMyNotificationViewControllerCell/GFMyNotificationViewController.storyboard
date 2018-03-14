@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Notification View Controller2-->
+        <scene sceneID="vUz-bS-Wm3">
+            <objects>
+                <viewController id="Cbv-KM-df0" customClass="GFMyNotificationViewController2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9lL-wA-JrU"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ec-Xa-QnG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2QO-XD-w4b" customClass="GFMyCardViewControllerTableViewCell">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SLf-Ip-4Mv">
+                                <rect key="frame" x="16" y="94" width="288" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="消息通知"/>
+                                    <segment title="公告消息"/>
+                                </segments>
+                                <connections>
+                                    <action selector="TowSelet:" destination="Cbv-KM-df0" eventType="valueChanged" id="ynx-Kp-Bi6"/>
+                                    <action selector="TwoSelet:" destination="Cbv-KM-df0" eventType="valueChanged" id="cFV-PM-wxC"/>
+                                    <action selector="control_bar:" destination="Cbv-KM-df0" eventType="valueChanged" id="Iyq-T2-iKQ"/>
+                                    <action selector="twoSeletion:" destination="4Yr-xK-J3m" eventType="valueChanged" id="D1X-jG-cDO"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="消息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP2-NW-gUR">
+                                <rect key="frame" x="143" y="60" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwA-ad-yKD">
+                                <rect key="frame" x="0.0" y="142" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="fp5-Yk-kJR"/>
+                                    <tabBarItem systemItem="more" id="vi4-mU-srE"/>
+                                </items>
+                            </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxA-YT-pSN">
+                                <rect key="frame" x="143" y="228" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btn_change:" destination="Cbv-KM-df0" eventType="touchUpInside" id="Uaz-fH-KFA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="TowSeletion" destination="SLf-Ip-4Mv" id="6w6-n7-ePp"/>
+                        <outlet property="TwoSeletion" destination="SLf-Ip-4Mv" id="jFZ-F6-myN"/>
+                        <outlet property="btn" destination="YxA-YT-pSN" id="ehp-va-U7V"/>
+                        <outlet property="message" destination="tP2-NW-gUR" id="1To-zB-Wgz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gz2-MN-qYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4Yr-xK-J3m" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1972.5" y="-326.40845070422534"/>
+        </scene>
+    </scenes>
+</document>
