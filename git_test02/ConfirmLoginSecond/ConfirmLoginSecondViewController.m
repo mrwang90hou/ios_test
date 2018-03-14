@@ -5,12 +5,21 @@
 //  Created by 国方商标 on 2018/3/13.
 //  Copyright © 2018年 mrwang90hou. All rights reserved.
 //
-
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "ConfirmLoginSecondViewController.h"
 #import <Masonry.h>
 #import "SVProgressHUD.h"
 #import "MessageValidationViewController.h"
+
+//屏幕尺寸
+#define kMainScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kMainScreenHeight [UIScreen mainScreen].bounds.size.height
+
+// 颜色
+#define KRGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+
 @interface ComfirmLoginSceondViewController()
 @property (strong,nonatomic)UIButton *close_btn;   //关闭按钮
 @property (strong,nonatomic)UIImageView *picture_computer;//电脑图片显示
@@ -40,6 +49,16 @@
     
     
     
+    //通过插入一个view的方法，实现相对布局，使得  电脑图片   占屏幕的1/6
+    UIView *adView = [UIView new];
+    [self.view addSubview:adView];
+    [adView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(self.view);
+        make.trailing.equalTo(self.view);
+        make.top.equalTo(self.view);
+        make.height.equalTo([NSNumber numberWithFloat:(kMainScreenWidth / 6 * 1)]);
+    }];
+    
     //电脑图片显示
     
     _picture_computer = [[UIImageView alloc] init];
@@ -50,13 +69,17 @@
 //        make.width.mas_equalTo(self.view.mas_width);
 //        make.left.equalTo(self.view).with.offset(40);
 //        make.right.equalTo(self.view).with.offset(-40);
-        make.top.equalTo(self.view).with.offset(80);
+        
+        
+        make.top.equalTo(adView.mas_bottom).with.offset(16);//占屏幕的1/6
+        //[NSNumber numberWithFloat:(kMainScreenWidth / 16 * 3)]
+        
+        
+        //make.top.equalTo(self.view).with.offset(80);
         //make.edges.equalTo(self.view);
         make.centerX.equalTo(self.view);
         //make.centerY.equalTo(self.view);
     }];
-    
-    
     
 //
 //

@@ -155,7 +155,7 @@
 
     [self presentViewController:comfirmLogin animated:YES completion:nil];
     
-    [SVProgressHUD showSuccessWithStatus:@"页面方式一跳转成功！"];
+    //[SVProgressHUD showSuccessWithStatus:@"页面方式一跳转成功！"];
 }
 #pragma mark 方式二：纯代码跳转方式
 -(void)pageJump2{
@@ -169,7 +169,7 @@
     //现在开启动画
     [self presentViewController:nVC animated:YES completion:nil];
     
-    [SVProgressHUD showSuccessWithStatus:@"页面方式二跳转成功！"];
+    //[SVProgressHUD showSuccessWithStatus:@"页面方式二跳转成功！"];
 }
 #pragma mark 方式三：xib布局----跳转方式
 -(void)pageJump3{
@@ -184,7 +184,7 @@
     
     [self presentViewController:comfirmLogin animated:YES completion:nil];
     
-    [SVProgressHUD showSuccessWithStatus:@"页面方式三跳转成功！"];
+    //[SVProgressHUD showSuccessWithStatus:@"页面方式三跳转成功！"];
 }
 -(void)setData{
     self.useName.text = @"wangning";

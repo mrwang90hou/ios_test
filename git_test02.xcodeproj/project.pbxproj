@@ -179,7 +179,7 @@
 				7589E0E920579EA200DBDFCA /* ConfirmLoginThird */,
 				7589E0F02057C24200DBDFCA /* MessageValidation(短信验证) */,
 				92F2A2EC20510F61007512E9 /* Assets.xcassets */,
-				92C391D8205810F500717859 /* BYTimer-master */,
+				92C391D8205810F500717859 /* BYTimer */,
 				92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */,
 				92AE1C6220413C3C00FB2FAB /* Info.plist */,
 				92AE1C6320413C3C00FB2FAB /* main.m */,
@@ -187,7 +187,7 @@
 			path = git_test02;
 			sourceTree = "<group>";
 		};
-		92C391D8205810F500717859 /* BYTimer-master */ = {
+		92C391D8205810F500717859 /* BYTimer */ = {
 			isa = PBXGroup;
 			children = (
 				92C391D9205810F500717859 /* Singleton.h */,
@@ -195,7 +195,7 @@
 				92C391DA205810F500717859 /* BYTimer.m */,
 				92C391DB205810F500717859 /* README.md */,
 			);
-			path = "BYTimer-master";
+			path = BYTimer;
 			sourceTree = "<group>";
 		};
 		99233FA761FEAFA0A7A3D814 /* Pods */ = {
