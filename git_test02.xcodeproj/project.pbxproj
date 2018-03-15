@@ -18,6 +18,7 @@
 		923ED55E205974A40055E23C /* GFMyNotificationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923ED557205974A40055E23C /* GFMyNotificationViewController.storyboard */; };
 		923ED55F205974A40055E23C /* GFMyNotificationViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 923ED559205974A40055E23C /* GFMyNotificationViewController2.m */; };
 		923ED560205974A40055E23C /* GFMyNotificationViewControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 923ED55B205974A40055E23C /* GFMyNotificationViewControllerCell.m */; };
+		923ED563205A56940055E23C /* rootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923ED562205A56940055E23C /* rootViewController.m */; };
 		924C1241205234E000EBFCBE /* GFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C123F205234DF00EBFCBE /* GFButton.m */; };
 		924C124320523C4500EBFCBE /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924C124220523C4500EBFCBE /* LoginViewController.storyboard */; };
 		924C124720525EA500EBFCBE /* CYXThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C124420525EA400EBFCBE /* CYXThreeViewController.m */; };
@@ -55,6 +56,8 @@
 		923ED55A205974A40055E23C /* GFMyNotificationViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFMyNotificationViewController2.h; sourceTree = "<group>"; };
 		923ED55B205974A40055E23C /* GFMyNotificationViewControllerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFMyNotificationViewControllerCell.m; sourceTree = "<group>"; };
 		923ED55C205974A40055E23C /* GFMyNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFMyNotificationViewController.h; sourceTree = "<group>"; };
+		923ED561205A56830055E23C /* rootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rootViewController.h; sourceTree = "<group>"; };
+		923ED562205A56940055E23C /* rootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rootViewController.m; sourceTree = "<group>"; };
 		924C123F205234DF00EBFCBE /* GFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFButton.m; sourceTree = "<group>"; };
 		924C1240205234DF00EBFCBE /* GFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFButton.h; sourceTree = "<group>"; };
 		924C124220523C4500EBFCBE /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
@@ -199,6 +202,8 @@
 			children = (
 				92AE1C5420413C3C00FB2FAB /* AppDelegate.h */,
 				92AE1C5520413C3C00FB2FAB /* AppDelegate.m */,
+				923ED561205A56830055E23C /* rootViewController.h */,
+				923ED562205A56940055E23C /* rootViewController.m */,
 				92AE1C5720413C3C00FB2FAB /* ViewController.h */,
 				92AE1C5820413C3C00FB2FAB /* ViewController.m */,
 				92F2A2EB204FBA33007512E9 /* LoginViewController.h */,
@@ -211,10 +216,10 @@
 				7589E0E5205780C300DBDFCA /* ConfirmLoginSecond */,
 				7589E0E920579EA200DBDFCA /* ConfirmLoginThird */,
 				7589E0F02057C24200DBDFCA /* MessageValidation(短信验证) */,
-				92F2A2EC20510F61007512E9 /* Assets.xcassets */,
 				92C391D8205810F500717859 /* BYTimer */,
 				923ED5542059739E0055E23C /* 【我的通知】 */,
 				92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */,
+				92F2A2EC20510F61007512E9 /* Assets.xcassets */,
 				92AE1C6220413C3C00FB2FAB /* Info.plist */,
 				92AE1C6320413C3C00FB2FAB /* main.m */,
 			);
@@ -384,6 +389,7 @@
 				7589E0E82057822600DBDFCA /* ConfirmLoginSecondViewController.m in Sources */,
 				923ED560205974A40055E23C /* GFMyNotificationViewControllerCell.m in Sources */,
 				924C124720525EA500EBFCBE /* CYXThreeViewController.m in Sources */,
+				923ED563205A56940055E23C /* rootViewController.m in Sources */,
 				7589E0ED20579F0600DBDFCA /* ConfirmLoginThirdViewController.m in Sources */,
 				92AE1C5920413C3C00FB2FAB /* ViewController.m in Sources */,
 				92AE1C6420413C3C00FB2FAB /* main.m in Sources */,

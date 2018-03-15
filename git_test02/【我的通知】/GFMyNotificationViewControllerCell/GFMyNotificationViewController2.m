@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "rootViewController.h"
 
-
-@implementation GFMyNotificationViewController2 : UIViewController
+@implementation GFMyNotificationViewController2 : rootViewController
 
 - (IBAction)TwoSelet:(id)sender {
    

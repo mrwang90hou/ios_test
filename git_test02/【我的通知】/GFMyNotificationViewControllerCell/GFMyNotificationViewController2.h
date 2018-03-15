@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GFBaseViewController.h"
-@interface GFMyNotificationViewController2 : GFBaseViewController
+@interface GFMyNotificationViewController2 : rootViewController
 @property (weak, nonatomic) IBOutlet UILabel *message;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *TwoSeletion;
 @property (weak, nonatomic) IBOutlet UIButton *btn;

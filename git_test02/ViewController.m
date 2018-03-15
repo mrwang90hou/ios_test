@@ -11,6 +11,7 @@
 #import "GFButton.h"
 #import "Masonry.h"
 #import "CYXThreeViewController.h"
+#import "GFMyNotificationViewController.h"
 //屏幕尺寸
 #define kMainScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kMainScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -141,7 +142,6 @@ static float AD_height = 150;//广告栏高度
     printf("This is a progream!!!\n");
     //[self.navigationController popViewControllerAnimated:YES];       //返回弹出式控制器（mrwang90hou-2017.11.16  pm）
 }
-
 
 #pragma mark - 创建collectionView并设置代理
 - (UICollectionView *)collectionView
@@ -285,7 +285,7 @@ static float AD_height = 150;//广告栏高度
  
 }
 //跳转至turn_to_UITableView
--(void)turn_to_UITableView{
+-(void)turn_to_UITableView:(UIButton *)button{
     
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
     {
@@ -293,33 +293,40 @@ static float AD_height = 150;//广告栏高度
         //添加Button
         [alertController addAction: [UIAlertAction actionWithTitle: @"跳转方式一" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             //取消
-            [self btnClick];
+            [self turn_to_UITableViewCell];
             return ;
             
         }]];
         [alertController addAction: [UIAlertAction actionWithTitle: @"跳转方式二" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             //跳转到确认登录页面
             //[self confirmLogin];
-            [self btnClick];
+            //[self btnClick];
             return ;
             
         }]];
-//        [alertController addAction: [UIAlertAction actionWithTitle: @"取消" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//            //跳转到确认登录页面
-//            //[self confirmLogin];
-//            [self btnClick];
-//            return ;
-//        }]];
+        [alertController addAction: [UIAlertAction actionWithTitle: @"取消" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            //跳转到确认登录页面
+            //[self confirmLogin];
+            //[self btnClick];
+            return ;
+        }]];
         [self presentViewController: alertController animated: YES completion: nil];
     }
     else
     {
-        [self print];
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"my_logout_warning" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES",nil];
         [alertView show];
     }
-    
 }
-
+-(void)turn_to_UITableViewCell
+{
+    //设置要进入的页面
+    GFMyNotificationViewController *notificationVC = [[GFMyNotificationViewController alloc]init];
+    //设置跳转模式为：UINavigation
+    UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:notificationVC];
+    //设置跳转动画:水平翻转
+    [notificationVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentViewController:nVC animated:YES completion:nil];
+}
 
 @end

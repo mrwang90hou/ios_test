@@ -13,7 +13,7 @@
 #endif /* GFMyNotificationViewController_h */
 
 #import <UIKit/UIKit.h>
-
+#import "rootViewController.h"
 #define KEY_LANGUAGE @"key_language"          //关键语（mrwang90hou-2017.11.16  am）
 #define NSNewLocalizedString(key, comment) \
 [[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:KEY_LANGUAGE]] ofType:@"lproj"]] localizedStringForKey:(key) value:@"" table:nil]
@@ -31,6 +31,6 @@
 
 //#import "GFBaseViewController.h"
 
-@interface GFMyNotificationViewController : UIViewController
+@interface GFMyNotificationViewController : rootViewController
 
 @end
