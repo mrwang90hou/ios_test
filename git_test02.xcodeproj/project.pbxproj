@@ -19,6 +19,12 @@
 		923ED55F205974A40055E23C /* GFMyNotificationViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 923ED559205974A40055E23C /* GFMyNotificationViewController2.m */; };
 		923ED560205974A40055E23C /* GFMyNotificationViewControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 923ED55B205974A40055E23C /* GFMyNotificationViewControllerCell.m */; };
 		923ED563205A56940055E23C /* rootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923ED562205A56940055E23C /* rootViewController.m */; };
+		923ED590205C02350055E23C /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923ED586205C02350055E23C /* SlideViewController.m */; };
+		923ED591205C02350055E23C /* SlideBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923ED587205C02350055E23C /* SlideBarCell.xib */; };
+		923ED593205C02350055E23C /* SlideView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923ED58A205C02350055E23C /* SlideView.storyboard */; };
+		923ED594205C02350055E23C /* SlideBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 923ED58C205C02350055E23C /* SlideBarCell.m */; };
+		923ED595205C02350055E23C /* PushWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923ED58D205C02350055E23C /* PushWebViewController.m */; };
+		923ED596205C02350055E23C /* SlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923ED58E205C02350055E23C /* SlideTabBarView.m */; };
 		924C1241205234E000EBFCBE /* GFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C123F205234DF00EBFCBE /* GFButton.m */; };
 		924C124320523C4500EBFCBE /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924C124220523C4500EBFCBE /* LoginViewController.storyboard */; };
 		924C124720525EA500EBFCBE /* CYXThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924C124420525EA400EBFCBE /* CYXThreeViewController.m */; };
@@ -58,6 +64,16 @@
 		923ED55C205974A40055E23C /* GFMyNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFMyNotificationViewController.h; sourceTree = "<group>"; };
 		923ED561205A56830055E23C /* rootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rootViewController.h; sourceTree = "<group>"; };
 		923ED562205A56940055E23C /* rootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rootViewController.m; sourceTree = "<group>"; };
+		923ED583205C02350055E23C /* PushWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushWebViewController.h; sourceTree = "<group>"; };
+		923ED584205C02350055E23C /* SlideBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideBarCell.h; sourceTree = "<group>"; };
+		923ED585205C02350055E23C /* SlideTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTabBarView.h; sourceTree = "<group>"; };
+		923ED586205C02350055E23C /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
+		923ED587205C02350055E23C /* SlideBarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideBarCell.xib; sourceTree = "<group>"; };
+		923ED58B205C02350055E23C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SlideView.storyboard; sourceTree = "<group>"; };
+		923ED58C205C02350055E23C /* SlideBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideBarCell.m; sourceTree = "<group>"; };
+		923ED58D205C02350055E23C /* PushWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushWebViewController.m; sourceTree = "<group>"; };
+		923ED58E205C02350055E23C /* SlideTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarView.m; sourceTree = "<group>"; };
+		923ED58F205C02350055E23C /* SlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
 		924C123F205234DF00EBFCBE /* GFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFButton.m; sourceTree = "<group>"; };
 		924C1240205234DF00EBFCBE /* GFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFButton.h; sourceTree = "<group>"; };
 		924C124220523C4500EBFCBE /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
@@ -165,6 +181,31 @@
 			path = GFMyNotificationViewControllerCell;
 			sourceTree = "<group>";
 		};
+		923ED582205C02350055E23C /* 【我的通知】SlideTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				923ED597205C024E0055E23C /* View */,
+				923ED583205C02350055E23C /* PushWebViewController.h */,
+				923ED58D205C02350055E23C /* PushWebViewController.m */,
+				923ED58F205C02350055E23C /* SlideViewController.h */,
+				923ED586205C02350055E23C /* SlideViewController.m */,
+				923ED58A205C02350055E23C /* SlideView.storyboard */,
+			);
+			path = "【我的通知】SlideTabBar";
+			sourceTree = "<group>";
+		};
+		923ED597205C024E0055E23C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				923ED584205C02350055E23C /* SlideBarCell.h */,
+				923ED58C205C02350055E23C /* SlideBarCell.m */,
+				923ED587205C02350055E23C /* SlideBarCell.xib */,
+				923ED585205C02350055E23C /* SlideTabBarView.h */,
+				923ED58E205C02350055E23C /* SlideTabBarView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		924C12772052763800EBFCBE /* ThreeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +259,7 @@
 				7589E0F02057C24200DBDFCA /* MessageValidation(短信验证) */,
 				92C391D8205810F500717859 /* BYTimer */,
 				923ED5542059739E0055E23C /* 【我的通知】 */,
+				923ED582205C02350055E23C /* 【我的通知】SlideTabBar */,
 				92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */,
 				92F2A2EC20510F61007512E9 /* Assets.xcassets */,
 				92AE1C6220413C3C00FB2FAB /* Info.plist */,
@@ -311,6 +353,8 @@
 				923ED55E205974A40055E23C /* GFMyNotificationViewController.storyboard in Resources */,
 				7589E0EF20579F1E00DBDFCA /* ConfirmLoginThirdViewController.xib in Resources */,
 				923C034620560BA3006D4A46 /* ConfirmLoginViewController.storyboard in Resources */,
+				923ED593205C02350055E23C /* SlideView.storyboard in Resources */,
+				923ED591205C02350055E23C /* SlideBarCell.xib in Resources */,
 				92C391DE205810F500717859 /* README.md in Resources */,
 				924C124820525EA500EBFCBE /* CYXThreeViewController.storyboard in Resources */,
 				92AE1C6120413C3C00FB2FAB /* LaunchScreen.storyboard in Resources */,
@@ -379,8 +423,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923ED590205C02350055E23C /* SlideViewController.m in Sources */,
 				92F2A2EA204FB7E7007512E9 /* LoginViewController.m in Sources */,
 				923ED55F205974A40055E23C /* GFMyNotificationViewController2.m in Sources */,
+				923ED595205C02350055E23C /* PushWebViewController.m in Sources */,
+				923ED594205C02350055E23C /* SlideBarCell.m in Sources */,
 				923C034720560BA3006D4A46 /* ConfirmLoginViewController.m in Sources */,
 				923ED55D205974A40055E23C /* GFMyNotificationViewController.m in Sources */,
 				924C1241205234E000EBFCBE /* GFButton.m in Sources */,
@@ -389,6 +436,7 @@
 				7589E0E82057822600DBDFCA /* ConfirmLoginSecondViewController.m in Sources */,
 				923ED560205974A40055E23C /* GFMyNotificationViewControllerCell.m in Sources */,
 				924C124720525EA500EBFCBE /* CYXThreeViewController.m in Sources */,
+				923ED596205C02350055E23C /* SlideTabBarView.m in Sources */,
 				923ED563205A56940055E23C /* rootViewController.m in Sources */,
 				7589E0ED20579F0600DBDFCA /* ConfirmLoginThirdViewController.m in Sources */,
 				92AE1C5920413C3C00FB2FAB /* ViewController.m in Sources */,
@@ -402,6 +450,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		923ED58A205C02350055E23C /* SlideView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				923ED58B205C02350055E23C /* Base */,
+			);
+			name = SlideView.storyboard;
+			sourceTree = "<group>";
+		};
 		92AE1C5F20413C3C00FB2FAB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

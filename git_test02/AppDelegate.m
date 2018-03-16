@@ -8,7 +8,14 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-@interface AppDelegate ()
+#import "PushWebViewController.h"
+
+@interface AppDelegate ()<UIAlertViewDelegate>
+
+
+
+@property (nonatomic, strong) NSDictionary *userInfo;
+
 
 @end
 
@@ -71,6 +78,72 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+
+#pragma mark -SlideTabViewController
+
+//获取DeviceToken成功
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    
+    
+    NSLog(@"DeviceToken: {%@}",deviceToken);
+    //这里进行的操作，是将Device Token发送到服务端
+    
+    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:nil message:[NSString stringWithFormat:@"DeviceToken:%@",deviceToken] delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+    [alert show];
+}
+
+//注册消息推送失败
+- (void)application:(UIApplication *)application
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    NSLog(@"Register Remote Notifications error:{%@}",error);
+    //    NSLog(@"Register Remote Notifications error:{%@}",error.localizedDescription);
+}
+
+//处理收到的消息推送
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    NSLog(@"Receive remote notification : %@",userInfo);
+    self.userInfo = userInfo;
+    
+    
+    UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"通知" message:@"通知" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"查看", nil];
+    [alter show];
+    
+    
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        //跳转到WebView
+        UINavigationController *webViewControllerNav = [[UIStoryboard storyboardWithName:@"SlideView" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"PushWebViewControllerNav"];
+        
+        PushWebViewController *webViewController = webViewControllerNav.viewControllers[0];
+        webViewController.url = _userInfo[@"aps"][@"alert"];
+        
+        [self.window.rootViewController presentViewController:webViewControllerNav animated:YES completion:^{
+            
+        }];
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end
