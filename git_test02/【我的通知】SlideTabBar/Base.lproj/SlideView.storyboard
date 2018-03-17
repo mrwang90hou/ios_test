@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,24 +36,32 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SlideTab" id="c7h-11-aQJ">
-                        <barButtonItem key="leftBarButtonItem" title="——" id="zyo-bj-bBk">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="XRK-UN-0Qx">
                             <connections>
-                                <action selector="jian:" destination="vXZ-lx-hvc" id="GSj-8u-E1s"/>
+                                <action selector="back_action:" destination="vXZ-lx-hvc" id="qOE-Oi-QUC"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="C0q-jo-ewb">
-                            <connections>
-                                <action selector="add:" destination="vXZ-lx-hvc" id="Jqc-ZA-QO0"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="C0q-jo-ewb">
+                                <connections>
+                                    <action selector="add:" destination="vXZ-lx-hvc" id="Jqc-ZA-QO0"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="—" id="zyo-bj-bBk">
+                                <connections>
+                                    <action selector="jian:" destination="vXZ-lx-hvc" id="GSj-8u-E1s"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="back_btn" destination="XRK-UN-0Qx" id="AZd-g2-6lW"/>
                         <outlet property="superView" destination="qSP-4N-UDs" id="YWb-Pf-tDA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="-226"/>
+            <point key="canvasLocation" x="1369" y="-278"/>
         </scene>
         <!--Push Web View Controller-->
         <scene sceneID="B3G-mX-pkB">
@@ -110,7 +119,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="soc-na-ZC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498" y="-226"/>
+            <point key="canvasLocation" x="449" y="-278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fIy-VG-a7x">

@@ -12,6 +12,7 @@
 #import "Masonry.h"
 #import "CYXThreeViewController.h"
 #import "GFMyNotificationViewController.h"
+#import "SlideViewController.h"
 //屏幕尺寸
 #define kMainScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kMainScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -300,7 +301,7 @@ static float AD_height = 150;//广告栏高度
         [alertController addAction: [UIAlertAction actionWithTitle: @"跳转方式二" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             //跳转到确认登录页面
             //[self confirmLogin];
-            //[self btnClick];
+            [self turn_to_UITableViewCell_2];
             return ;
             
         }]];
@@ -326,6 +327,16 @@ static float AD_height = 150;//广告栏高度
     UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:notificationVC];
     //设置跳转动画:水平翻转
     [notificationVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentViewController:nVC animated:YES completion:nil];
+}
+-(void)turn_to_UITableViewCell_2
+{
+    //设置要进入的页面
+    SlideViewController *slideVC = [[SlideViewController alloc]init];
+    //设置跳转模式为：UINavigation
+    UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:slideVC];
+    //设置跳转动画:水平翻转
+    [nVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
     [self presentViewController:nVC animated:YES completion:nil];
 }
 
